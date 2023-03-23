@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,800;1,700&display=swap"
         rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
     <title>Weather Dashboard</title>
@@ -18,7 +19,8 @@
 <body>
     <div class="flex justify-center">
         <div class="relative my-6 w-60 h-60 bg-slate-800 rounded-xl shadow-xl shadow-slate-900 opacity-80" id="primary-box">
-            <input type="text" placeholder="Search Location..."class="text-center my-5 mx-5 w-50 h-8 bg-slate-600 rounded-xl">
+            <div class="weather-posts">
+            <input type="text" id = "user-input" placeholder="Search Location..."class="text-center my-5 mx-5 w-50 h-8 bg-slate-600 rounded-xl">
             <i class="button absolute bottom-48 left-48 text-white bg-slate-600 text-lg rounded-xl px-1.5 hover:text-black hover:bg-white fa-solid fa-magnifying-glass-location"></i>
             <p class="text-white text-lg" id="weath-place">Weather in</p>
             <p class="text-white text-4xl ml-24" id="current-temp">75<span>&#176;</span></p>
@@ -26,8 +28,10 @@
             <p class="text-white my-1" id="low">Low:<span>&#176;</span></p>
             <p class="text-white" id="description">Description</p>
         </div>
+        </div>
     </div>
     <div class="flex flex-wrap grid-cols-1 gap-12 justify-center opacity-80 my-6">
+        <div class="weather-posts">
         <div class="w-60 h-60 bg-slate-800 rounded-xl shadow-xl shadow-slate-900">
             <p class="text-white text-2xl ml-16 my-4" id="date">DayDate</p>
             <p class="text-white text-5xl ml-20" id="current-temp">75<span>&#176;</span></p>
@@ -35,6 +39,8 @@
             <p class="text-white my-2" id="low">Low:<span>&#176;</span></p>
             <p class="text-white" id="description">Description</p>
         </div>
+        </div>
+        <div class="weather-posts">
         <div class="w-60 h-60 bg-slate-800 rounded-xl shadow-xl shadow-slate-900">
             <p class="text-white text-2xl ml-16 my-4" id="date">DayDate</p>
             <p class="text-white text-5xl ml-20" id="current-temp">75<span>&#176;</span></p>
@@ -42,6 +48,8 @@
             <p class="text-white my-2" id="low">Low:<span>&#176;</span></p>
             <p class="text-white" id="description">Description</p>
         </div>
+        </div>
+        <div class="weather-posts">
         <div class="w-60 h-60 bg-slate-800 rounded-xl shadow-xl shadow-slate-900">
             <p class="text-white text-2xl ml-16 my-4" id="date">DayDate</p>
             <p class="text-white text-5xl ml-20" id="current-temp">75<span>&#176;</span></p>
@@ -49,12 +57,15 @@
             <p class="text-white my-2" id="low">Low:<span>&#176;</span></p>
             <p class="text-white" id="description">Description</p>
         </div>
+        </div>
+        <div class="weather-posts">
         <div class="w-60 h-60 bg-slate-800 rounded-xl shadow-xl shadow-slate-900">
             <p class="text-white text-2xl ml-16 my-4" id="date">DayDate</p>
             <p class="text-white text-5xl ml-20" id="current-temp">75<span>&#176;</span></p>
             <p class="text-white my-2" id="high">High:<span>&#176;</span></p>
             <p class="text-white my-2" id="low">Low:<span>&#176;</span></p>
             <p class="text-white" id="description">Description</p>
+        </div>
         </div>
     </div>
 
@@ -65,7 +76,8 @@
 
 
 
-
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="script.js"></script>
 
 </body>
