@@ -1,8 +1,9 @@
 var weatherURL = `https://api.openweathermap.org/data/2.5/forecast?`;
 var APIKEY = '8b898c3025d1ef3a71e8de4af256aea3';
-var geocoderURL = `http://api.openweathermap.org/geo/1.0/direct?q=SanDiego,CA,USA&appid=${APIKEY}`;
+let  city = inputBar.value;
+var geocoderURL = `http://api.openweathermap.org/geo/1.0/direct?q=${city},CA,USA&appid=${APIKEY}`;
 
-var city;
+
 // var lon;
 // var lat;
 var searchLocation;
@@ -16,7 +17,7 @@ var lowTemp = $('.low');
 var weatherDes = $('.description');
 var weathDate = $('.date');
 var weathButton = $('.button');
-var input = $("#user-input");
+var inputBar = $("#user-input");
 
 // function parsedLocation(result) {
 //   lon = result.center[0];
@@ -35,7 +36,8 @@ function getWeather() {
   // .then(function(data){
   //   console.log(data)
   // })
-  fetch(geocoderURL)
+
+  fetch(geocoderURL + city)
     .then(function (response) {
       return response.json();
     })
@@ -71,26 +73,26 @@ function getWeather() {
 
 };
 
-var formSubmitHandler = function (event) {
-  event.preventDefault();
+// var formSubmitHandler = function (event) {
+//   event.preventDefault();
 
-  if (eventResult) {
-    parseLocation(eventResult);
-  }
+//   if (eventResult) {
+//     parseLocation(eventResult);
+//   }
 
 
-};
+// };
 
 function loadWeather() {
-  searchLoc = localStorage.getItem('#user-input');
+  inputBar = localStorage.getItem('#user-input');
   lon = localStorage.getItem('lon');
   lat = localStorage.getItem('lat');
 
-  weathEL.text("Weather for " + searchLocation);
+  weathEL.text("Weather for " + inputBar);
   getWeather(lon, lat);
 
   weathButton.on("click", function () {
-    searchLocation = input.value;
+    inputBar = input.value;
     console.log(searchLocation);
   })
 
