@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,800;1,700&display=swap"
         rel="stylesheet">
-        <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
     <title>Weather Dashboard</title>
@@ -18,55 +18,77 @@
 
 <body>
     <div class="flex justify-center">
-        <div class="relative my-6 w-60 h-60 bg-slate-800 rounded-xl shadow-xl shadow-slate-900 opacity-80" id="primary-box">
+        <div class="relative my-6 w-60 h-60 bg-slate-800 rounded-xl shadow-xl shadow-slate-900 opacity-80"
+            id="primary-box">
             <div class="weather-posts">
-            <input type="text" id = "user-input" placeholder="Search Location..."class="text-center my-5 mx-5 w-50 h-8 bg-slate-600 rounded-xl">
-            <i class="button absolute bottom-48 left-48 text-white bg-slate-600 text-lg rounded-xl px-1.5 hover:text-black hover:bg-white fa-solid fa-magnifying-glass-location"></i>
-            <p class="weath-place text-white text-lg">Weather in</p>
-            <p class="current-temp text-white text-4xl ml-24">75<span>&#176;</span></p>
-            <p class="high text-white my-1">High:<span>&#176;</span></p>
-            <p class="low text-white my-1" >Low:<span>&#176;</span></p>
-            <p class="description text-white">Description</p>
-        </div>
+                <input type="text" id="user-input" name = "input-bar" placeholder="Search Location..."
+                    class="text-center my-5 mx-5 w-50 h-8 bg-slate-600 rounded-xl">
+                <i
+                    class="button absolute bottom-48 left-48 text-white bg-slate-600 text-lg rounded-xl px-1.5 hover:text-black hover:bg-white fa-solid fa-magnifying-glass-location"></i>
+                <p class="weath-place text-white text-lg">Weather in</p>
+                <p class="current-weather text-white text-4xl ml-24">75<span id="icon">&#176;</span></p>
+                <p class="high-temp text-white my-1">High:<span id="icon">&#176;</span></p>
+                <p class="low-temp text-white my-1">Low:<span id="icon">&#176;</span></p>
+                <p id="description"class="text-white">Description</p>
+                <p id="humidity"class="text-white">Humidity</p>
+            </div>
         </div>
     </div>
     <div class="flex flex-wrap grid-cols-1 gap-12 justify-center opacity-80 my-6">
         <div class="weather-posts">
-        <div class="w-60 h-60 bg-slate-800 rounded-xl shadow-xl shadow-slate-900">
-            <p class="date text-white text-2xl ml-16 my-4">DayDate</p>
-            <p class="current-temp text-white text-5xl ml-20">75<p>&#176;</p></p>
-            <p class="high text-white my-2">High:<span>&#176;</span></p>
-            <p class="low text-white my-2">Low:<span>&#176;</span></p>
-            <p class="description text-white">Description</p>
-        </div>
-        </div>
-        <div class="weather-posts">
-        <div class="w-60 h-60 bg-slate-800 rounded-xl shadow-xl shadow-slate-900">
-            <p class="date text-white text-2xl ml-16 my-4">DayDate</p>
-            <p class="current-temp text-white text-5xl ml-20">75<span>&#176;</span></p>
-            <p class="high text-white my-2">High:<span>&#176;</span></p>
-            <p class="low text-white my-2">Low:<span>&#176;</span></p>
-            <p class="description text-white">Description</p>
-        </div>
+            <div class="w-60 h-60 bg-slate-800 rounded-xl shadow-xl shadow-slate-900">
+                <p class="date text-white text-2xl ml-16 my-4">DayDate</p>
+                <p class="current-temp text-white text-5xl ml-20">75
+                <p>&#176;</p>
+                </p>
+                <p class="high text-white my-2">High:<span>&#176;</span></p>
+                <p class="low text-white my-2">Low:<span>&#176;</span></p>
+                <p class="description text-white">Description</p>
+                <p id="humid"class="text-white humid">Humidity</p>
+            </div>
         </div>
         <div class="weather-posts">
-        <div class="date w-60 h-60 bg-slate-800 rounded-xl shadow-xl shadow-slate-900">
-            <p class="text-white text-2xl ml-16 my-4">DayDate</p>
-            <p class="current-temp text-white text-5xl ml-20">75<span>&#176;</span></p>
-            <p class="high text-white my-2">High:<span>&#176;</span></p>
-            <p class="low text-white my-2">Low:<span>&#176;</span></p>
-            <p class="description text-white">Description</p>
+            <div class="w-60 h-60 bg-slate-800 rounded-xl shadow-xl shadow-slate-900">
+                <p class="date text-white text-2xl ml-16 my-4">DayDate</p>
+                <p class="current-temp text-white text-5xl ml-20">75<span>&#176;</span></p>
+                <p class="high text-white my-2">High:<span>&#176;</span></p>
+                <p class="low text-white my-2">Low:<span>&#176;</span></p>
+                <p class="description text-white">Description</p>
+                <p id="humid"class="text-white humid">Humidity</p>
+            </div>
         </div>
+
+        <div class="weather-posts">
+            <div class="w-60 h-60 bg-slate-800 rounded-xl shadow-xl shadow-slate-900">
+                <p class="date text-white text-2xl ml-16 my-4">DayDate</p>
+                <p class="current-temp text-white text-5xl ml-20">75<span>&#176;</span></p>
+                <p class="high text-white my-2">High:<span>&#176;</span></p>
+                <p class="low text-white my-2">Low:<span>&#176;</span></p>
+                <p class="description text-white">Description</p>
+                <p id="humid"class="text-white humid">Humidity</p>
+            </div>
         </div>
         <div class="weather-posts">
-        <div class="date w-60 h-60 bg-slate-800 rounded-xl shadow-xl shadow-slate-900">
-            <p class="date text-white text-2xl ml-16 my-4">DayDate</p>
-            <p class="current-temp text-white text-5xl ml-20">75<span>&#176;</span></p>
-            <p class="high text-white my-2">High:<span>&#176;</span></p>
-            <p class="low text-white my-2">Low:<span>&#176;</span></p>
-            <p class="description text-white">Description</p>
+            <div class="w-60 h-60 bg-slate-800 rounded-xl shadow-xl shadow-slate-900">
+                <p class="date text-white text-2xl ml-16 my-4">DayDate</p>
+                <p class="current-temp text-white text-5xl ml-20">75<span>&#176;</span></p>
+                <p class="high text-white my-2">High:<span>&#176;</span></p>
+                <p class="low text-white my-2">Low:<span>&#176;</span></p>
+                <p class="description text-white">Description</p>
+                <p id="humid"class="text-white humid">Humidity</p>
+            </div>
         </div>
+        <div class="weather-posts">
+            <div class="w-60 h-60 bg-slate-800 rounded-xl shadow-xl shadow-slate-900">
+                <p class="date text-white text-2xl ml-16 my-4">DayDate</p>
+                <p class="current-temp text-white text-5xl ml-20">75<span>&#176;</span></p>
+                <p class="high text-white my-2">High:<span>&#176;</span></p>
+                <p class="low text-white my-2">Low:<span>&#176;</span></p>
+                <p class="description text-white">Description</p>
+                <p id="humid"class="text-white humid">Humidity</p>
+            </div>
         </div>
+        
     </div>
 
 
@@ -75,9 +97,11 @@
 
 
 
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
     <script src="script.js"></script>
 
 </body>
