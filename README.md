@@ -26,11 +26,10 @@ HTML, Tailwind.css, Javascript, jQuery
 ## Links
 
 [GitHub Repo]
-
-
+https://github.com/MariCods/Weather-Dashii
 
 [Deployed Link]
-
+https://maricods.github.io/Weather-Dashii/
 
 # License
    
